@@ -31,10 +31,34 @@
 <body>
   <div class="box">
     <h1>Rob Sianchuk Consulting has moved 🚀</h1>
+
     <p>Rob Sianchuk Consulting has been acquired by Vertima as of April 20, 2026.</p> 
-    <p>For all LCA and EPD service inquiries and support requests please visit the Vertima.ca or contact us at info@vertima.ca</p>
-    <p>This page will redirect you to the Vertima website in 30 seconds. If not, click the link below:</p>
+
+    <p>
+      For all LCA and EPD service inquiries and support requests please visit Vertima.ca or contact us at info@vertima.ca
+    </p>
+
+    <p>
+      This page will redirect you to the Vertima website in
+      <strong><span id="countdown">30</span></strong> seconds.
+      If not, click the link below:
+    </p>
+
     <p><a href="https://www.vertima.ca/en">Go to Vertima website</a></p>
   </div>
+
+  <script>
+    let timeLeft = 30;
+    const countdownEl = document.getElementById("countdown");
+
+    const timer = setInterval(() => {
+      timeLeft--;
+      countdownEl.textContent = timeLeft;
+
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
